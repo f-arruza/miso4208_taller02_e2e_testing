@@ -5,22 +5,23 @@ describe('Tour of heroes Dashboard', () => {
 
   beforeEach(() => {
     page = new TourOfHeroesPage();
-    page.navigateTo();
   });
 
   it('Buscar héroes.', () => {
+    page.navigateTo();
     expect(page.searchHeroes('Dr')).toEqual(['Dr IQ']);
   });
 
-  // it('should display top 4 heroes', () => {
-  //   page.navigateTo();
-  //   expect(page.getTop4Heroes()).toEqual(['Mr. Nice', 'Narco', 'Bombasto', 'Celeritas']);
-  // });
-  //
-  // it('should navigate to heroes', () => {
-  //   page.navigateToHeroes();
-  //   expect(page.getAllHeroes().count()).toBe(11);
-  // });
+  it('Navegar a un héroe desde el dashboard.', () => {
+    page.navigateHeroeFromDashboard(2);
+    expect(page.getTitleEditPage()).toEqual('Bombasto details!');
+  });
+
+  it('Navegar a un héroe desde la búsqueda.', () => {
+    page.navigateToDashboard();
+    page.navigateHeroeFromFinder('Celeritas');
+    expect(page.getTitleEditPage()).toEqual('Celeritas details!');
+  });
 });
 
 describe('Tour of heroes, heroes page', () => {
@@ -46,9 +47,9 @@ describe('Tour of heroes, heroes page', () => {
     expect(page.searchHeroes('Fern')).toEqual(['Fernando']);
   });
 
-  // it('should add a new hero', () => {
-  //   const currentHeroes = page.getAllHeroes().count();
-  //   page.enterNewHeroInInput('My new Hero');
-  //   expect(page.getAllHeroes().count()).toBe(currentHeroes.then(n => n + 1));
-  // });
+  it('Navegar a un héroe desde el listado.', () => {
+    page.navigateToHeroes();
+    expect(page.selectHero('Magma')).toEqual('MAGMA is my hero');
+    expect(page.gotoEditPage()).toEqual('Magma details!');
+  });
 });
