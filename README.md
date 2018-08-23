@@ -1,1 +1,17 @@
-# miso4208_taller02_e2e_testing
+# TALLER 2: E2E Testing
+
+## Cypress
+### Registrar nueva cuenta
+![alt text](cypress/images/cypress01.png)
+
+### Iniciar sesión
+![alt text](cypress/images/cypress02.png)
+
+### Intento de registro de cuenta ya existente
+![alt text](cypress/images/cypress03.png)
+
+### Buscar profesor
+![alt text](cypress/images/cypress04.png)
+
+### Ingreso a perfil de profesor
+![alt text](cypress/images/cypress05.png)
