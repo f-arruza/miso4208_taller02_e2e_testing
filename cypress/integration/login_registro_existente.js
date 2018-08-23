@@ -9,6 +9,7 @@ describe('Los estudiantes Registro', function() {
         cy.get('.cajaLogIn').find('input[name="password"]').click().type("1234567890")
         cy.get('.cajaLogIn').contains('Ingresar').click()
         cy.get('.navbar').find('[id="cuenta"]').click()
+        cy.wait(4000)
 
         // Cerrar sesión
         cy.get('.navbar').contains('Salir').click()
