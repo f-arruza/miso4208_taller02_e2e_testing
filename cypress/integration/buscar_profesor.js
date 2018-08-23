@@ -1,7 +1,7 @@
 describe('Buscar profesor', function() {
     it('Buscar profesor.', function() {
 
-        // Registrar nueva cuenta
+        // Buscar profesor
         cy.visit('https://losestudiantes.co')
         cy.contains('Cerrar').click()
 
