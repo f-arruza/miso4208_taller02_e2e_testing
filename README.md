@@ -20,4 +20,5 @@
 ![alt text](cypress/images/cypress06.png)
 
 ## Protractor
+### Ejecución de pruebas
 ![alt text](protractor/images/protractor01.png)
