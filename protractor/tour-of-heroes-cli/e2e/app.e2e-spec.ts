@@ -5,17 +5,22 @@ describe('Tour of heroes Dashboard', () => {
 
   beforeEach(() => {
     page = new TourOfHeroesPage();
-  });
-
-  it('should display top 4 heroes', () => {
     page.navigateTo();
-    expect(page.getTop4Heroes()).toEqual(['Mr. Nice', 'Narco', 'Bombasto', 'Celeritas']);
   });
 
-  it('should navigate to heroes', () => {
-    page.navigateToHeroes();
-    expect(page.getAllHeroes().count()).toBe(11);
+  it('Buscar héroes.', () => {
+    expect(page.searchHeroe('Dr')).toEqual(['Dr IQ']);
   });
+
+  // it('should display top 4 heroes', () => {
+  //   page.navigateTo();
+  //   expect(page.getTop4Heroes()).toEqual(['Mr. Nice', 'Narco', 'Bombasto', 'Celeritas']);
+  // });
+  //
+  // it('should navigate to heroes', () => {
+  //   page.navigateToHeroes();
+  //   expect(page.getAllHeroes().count()).toBe(11);
+  // });
 });
 
 describe('Tour of heroes, heroes page', () => {
@@ -26,23 +31,15 @@ describe('Tour of heroes, heroes page', () => {
     page.navigateToHeroes();
   });
 
-  it('should add a new hero', () => {
+  it('Eliminar héroes.', () => {
     const currentHeroes = page.getAllHeroes().count();
-    page.enterNewHeroInInput('My new Hero');
-    expect(page.getAllHeroes().count()).toBe(currentHeroes.then(n => n + 1));
+    page.deleteHeroe('Zero');
+    expect(page.getAllHeroes().count()).toBe(currentHeroes.then(n => n - 1));
   });
 
-});
-
-describe('Taller 02', () => {
-  let page: TourOfHeroesPage;
-
-  beforeEach(() => {
-    page = new TourOfHeroesPage();
-  });
-
-  it('Buscar héroes.', () => {
-    page.navigateTo();
-    expect(page.searchHeroe('Dr')).toEqual(['Dr IQ']);
-  });
+  // it('should add a new hero', () => {
+  //   const currentHeroes = page.getAllHeroes().count();
+  //   page.enterNewHeroInInput('My new Hero');
+  //   expect(page.getAllHeroes().count()).toBe(currentHeroes.then(n => n + 1));
+  // });
 });

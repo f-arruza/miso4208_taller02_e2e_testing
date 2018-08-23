@@ -26,4 +26,16 @@ export class TourOfHeroesPage {
     element(by.id('search-box')).sendKeys(hero_name);
     return element.all(by.css('.search-result')).getText();
   }
+
+  deleteHeroe(hero_name: string) {
+    var list = this.getAllHeroes();
+
+    list.each(function(key) {
+      key.all(by.tagName('span')).get(1).getText().then(function (val) {
+        if (val == hero_name) {
+          key.all(by.tagName('button')).click();
+        }
+      })
+    });
+  }
 }
