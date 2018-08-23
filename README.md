@@ -15,3 +15,6 @@
 
 ### Ingreso a perfil de profesor
 ![alt text](cypress/images/cypress05.png)
+
+### Filtrar comentarios por Materia
+![alt text](cypress/images/cypress06.png)
