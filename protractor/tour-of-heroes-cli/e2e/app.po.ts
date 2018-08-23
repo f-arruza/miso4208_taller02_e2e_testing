@@ -9,6 +9,10 @@ export class TourOfHeroesPage {
     return element.all(by.css('.module.hero')).all(by.tagName('h4')).getText();
   }
 
+  navigateToDashboard() {
+    element(by.linkText('Dashboard')).click();
+  }
+
   navigateToHeroes() {
     element(by.linkText('Heroes')).click();
   }
@@ -22,12 +26,12 @@ export class TourOfHeroesPage {
     element(by.buttonText('Add')).click();
   }
 
-  searchHeroe(hero_name: string) {
+  searchHeroes(hero_name: string) {
     element(by.id('search-box')).sendKeys(hero_name);
     return element.all(by.css('.search-result')).getText();
   }
 
-  deleteHeroe(hero_name: string) {
+  deleteHero(hero_name: string) {
     var list = this.getAllHeroes();
 
     list.each(function(key) {
@@ -37,5 +41,30 @@ export class TourOfHeroesPage {
         }
       })
     });
+  }
+
+  selectHero(hero_name: string) {
+    var list = this.getAllHeroes();
+
+    list.each(function(key) {
+      key.all(by.tagName('span')).get(1).getText().then(function (val) {
+        if (val == hero_name) {
+          key.all(by.tagName('span')).get(1).click();
+        }
+      })
+    });
+    return element(by.tagName('my-heroes')).all(by.tagName('div')).get(1).all(by.tagName('h2')).get(0).getText();
+  }
+
+  gotoEditPage() {
+    element(by.tagName('my-heroes')).all(by.tagName('div')).get(1).all(by.tagName('button')).click();
+    return element(by.tagName('h2')).getText();
+  }
+
+  editHero(hero_new_name: string) {
+    element(by.tagName('input')).clear();
+    element(by.tagName('input')).sendKeys(hero_new_name);
+    element(by.xpath('//html/body/my-app/hero-detail/div/button[2]')).click();
+    // browser.driver.sleep(5000);
   }
 }

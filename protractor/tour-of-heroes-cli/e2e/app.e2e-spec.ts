@@ -9,7 +9,7 @@ describe('Tour of heroes Dashboard', () => {
   });
 
   it('Buscar héroes.', () => {
-    expect(page.searchHeroe('Dr')).toEqual(['Dr IQ']);
+    expect(page.searchHeroes('Dr')).toEqual(['Dr IQ']);
   });
 
   // it('should display top 4 heroes', () => {
@@ -33,8 +33,17 @@ describe('Tour of heroes, heroes page', () => {
 
   it('Eliminar héroes.', () => {
     const currentHeroes = page.getAllHeroes().count();
-    page.deleteHeroe('Zero');
+    page.deleteHero('Zero');
     expect(page.getAllHeroes().count()).toBe(currentHeroes.then(n => n - 1));
+  });
+
+  it('Editar héroe.', () => {
+    expect(page.selectHero('Narco')).toEqual('NARCO is my hero');
+    expect(page.gotoEditPage()).toEqual('Narco details!');
+    page.editHero('Fernando');
+
+    page.navigateToDashboard();
+    expect(page.searchHeroes('Fern')).toEqual(['Fernando']);
   });
 
   // it('should add a new hero', () => {
