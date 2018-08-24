@@ -26,3 +26,9 @@
 ## Webdriver.io
 ### Ejecución de pruebas
 ![alt text](webdriverio/images/webdriverio01.png)
+
+## Nightwatch.js
+### Ejecución de pruebas
+![alt text](nightwatch/images/nightwatch01.png)
+
+![alt text](nightwatch/images/nightwatch02.png)
