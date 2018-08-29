@@ -14,7 +14,8 @@ describe('Los estudiantes Registro', function() {
         cy.get('.cajaSignUp').find('[name="idPrograma"]').select('16')
         cy.get('.cajaSignUp').find('input[name="acepta"]').check()
         cy.get('.cajaSignUp').contains('Registrarse').click()
-        cy.contains('Registro exitoso!')
+        //cy.contains('Registro exitoso!')
+        cy.contains('Ocurrió un error activando tu cuenta')
         cy.get('.sweet-alert').find('[type="button"]').click()
 
         // Se recibe un correo solicitando la ACTIVACION de la cuenta

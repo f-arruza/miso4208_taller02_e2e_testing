@@ -1,5 +1,11 @@
-# TALLER 2: E2E Testing
+# TALLER 2 y 3: E2E Testing / Headless Testing.
 
+## Taller 3 :: Headless Testing
+## Cypress
+![alt text](cypress/images/cypress07.png)
+![alt text](cypress/images/cypress08.png)
+
+## Taller 2 :: E2E Testing
 ## Cypress
 ### Registrar nueva cuenta
 ![alt text](cypress/images/cypress01.png)
