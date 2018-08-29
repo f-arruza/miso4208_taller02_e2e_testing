@@ -2,7 +2,9 @@
 
 ## Taller 3 :: Headless Testing
 ## Cypress
+### Headless Testing
 ![alt text](cypress/images/cypress07.png)
+### E2E Testing
 ![alt text](cypress/images/cypress08.png)
 
 ## Taller 2 :: E2E Testing
