@@ -42,6 +42,6 @@ describe('e2e testing -> losestudiantes.co', function() {
 
     browser.waitForVisible('.sweet-alert', 5000);
     var alertText = browser.element('.sweet-alert').element('h2').getText();
-    expect(alertText).toBe('Registro exitoso!');
+    expect(alertText).toBe('Ocurrió un error activando tu cuenta');
   });
 });

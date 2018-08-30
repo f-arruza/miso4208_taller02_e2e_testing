@@ -11,10 +11,10 @@ describe('e2e testing -> losestudiantes.co', function() {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
   });
 
-  it('Visitar Los estudiantes y registrar nueva cuenta.', function() {
+  it('Visitar Los estudiantes y buscar profesor.', function() {
     browser.url('https://losestudiantes.co');
     browser.click('button=Cerrar');
-
+    
     browser.waitForVisible('.Select-input', 5000);
     var finderBox = browser.element('.Select-input');
     var finderInput = finderBox.element('input[name="nombre"]');

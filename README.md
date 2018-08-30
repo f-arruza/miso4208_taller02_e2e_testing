@@ -17,6 +17,13 @@
 ### E2E Testing
 ![alt text](protractor/images/protractor03.png)
 
+## Webdriverio
+### Headless Testing
+![alt text](webdriverio/images/webdriverio02.png)
+
+### E2E Testing
+![alt text](webdriverio/images/webdriverio03.png)
+
 ## Taller 2 :: E2E Testing
 ## Cypress
 ### Registrar nueva cuenta
