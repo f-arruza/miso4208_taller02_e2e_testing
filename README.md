@@ -4,6 +4,9 @@
 ## Cypress
 ### Headless Testing
 ![alt text](cypress/images/cypress07.png)
+
+[Ir a videos](cypress/videos/)
+
 ### E2E Testing
 ![alt text](cypress/images/cypress08.png)
 
