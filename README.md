@@ -10,6 +10,13 @@
 ### E2E Testing
 ![alt text](cypress/images/cypress08.png)
 
+## Protractor.js
+### Headless Testing
+![alt text](protractor/images/protractor02.png)
+
+### E2E Testing
+![alt text](protractor/images/protractor03.png)
+
 ## Taller 2 :: E2E Testing
 ## Cypress
 ### Registrar nueva cuenta
