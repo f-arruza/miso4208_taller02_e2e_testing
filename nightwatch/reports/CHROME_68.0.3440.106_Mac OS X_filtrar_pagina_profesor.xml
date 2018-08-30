@@ -5,9 +5,9 @@
 
   <testsuite name="filtrar_pagina_profesor"
     errors="0" failures="0" hostname="" id="" package="filtrar_pagina_profesor" skipped="0"
-    tests="1" time="7.904" timestamp="Fri, 24 Aug 2018 04:16:31 GMT">
+    tests="1" time="6.152" timestamp="Thu, 30 Aug 2018 21:47:58 GMT">
   
-    <testcase name="Filtrar comentarios por materia." classname="filtrar_pagina_profesor" time="7.904" assertions="5">
+    <testcase name="Filtrar comentarios por materia." classname="filtrar_pagina_profesor" time="6.152" assertions="5">
 
     
 

@@ -24,6 +24,13 @@
 ### E2E Testing
 ![alt text](webdriverio/images/webdriverio03.png)
 
+## Nightwatch
+### Headless Testing
+![alt text](nightwatch/images/nightwatch03.png)
+
+### E2E Testing
+![alt text](nightwatch/images/nightwatch04.png)
+
 ## Taller 2 :: E2E Testing
 ## Cypress
 ### Registrar nueva cuenta
